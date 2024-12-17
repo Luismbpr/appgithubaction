@@ -1,0 +1,222 @@
+﻿2024-12-17T05:17:24.1896206Z Current runner version: '2.321.0'
+2024-12-17T05:17:24.1920818Z ##[group]Operating System
+2024-12-17T05:17:24.1921854Z Ubuntu
+2024-12-17T05:17:24.1922453Z 24.04.1
+2024-12-17T05:17:24.1922940Z LTS
+2024-12-17T05:17:24.1923370Z ##[endgroup]
+2024-12-17T05:17:24.1923983Z ##[group]Runner Image
+2024-12-17T05:17:24.1924559Z Image: ubuntu-24.04
+2024-12-17T05:17:24.1925029Z Version: 20241208.1.0
+2024-12-17T05:17:24.1926109Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20241208.1/images/ubuntu/Ubuntu2404-Readme.md
+2024-12-17T05:17:24.1927459Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20241208.1
+2024-12-17T05:17:24.1928293Z ##[endgroup]
+2024-12-17T05:17:24.1928885Z ##[group]Runner Image Provisioner
+2024-12-17T05:17:24.1929475Z 2.0.404.1
+2024-12-17T05:17:24.1929892Z ##[endgroup]
+2024-12-17T05:17:24.1931023Z ##[group]GITHUB_TOKEN Permissions
+2024-12-17T05:17:24.1933415Z Contents: read
+2024-12-17T05:17:24.1934058Z Metadata: read
+2024-12-17T05:17:24.1934737Z Packages: read
+2024-12-17T05:17:24.1935397Z ##[endgroup]
+2024-12-17T05:17:24.1938363Z Secret source: Actions
+2024-12-17T05:17:24.1939366Z Prepare workflow directory
+2024-12-17T05:17:24.2241836Z Prepare all required actions
+2024-12-17T05:17:24.2277696Z Getting action download info
+2024-12-17T05:17:24.4408288Z Download action repository 'actions/checkout@v2' (SHA:ee0669bd1cc54295c223e0bb666b733df41de1c5)
+2024-12-17T05:17:24.5486635Z Download action repository 'actions/setup-python@v2' (SHA:e9aba2c848f5ebd159c070c61ea2c4e2b122355e)
+2024-12-17T05:17:24.7524774Z Complete job name: test
+2024-12-17T05:17:24.8200021Z ##[group]Run actions/checkout@v2
+2024-12-17T05:17:24.8200877Z with:
+2024-12-17T05:17:24.8201572Z   repository: Luismbpr/appgithubaction
+2024-12-17T05:17:24.8202251Z   token: ***
+2024-12-17T05:17:24.8202661Z   ssh-strict: true
+2024-12-17T05:17:24.8203077Z   persist-credentials: true
+2024-12-17T05:17:24.8203536Z   clean: true
+2024-12-17T05:17:24.8203917Z   fetch-depth: 1
+2024-12-17T05:17:24.8204286Z   lfs: false
+2024-12-17T05:17:24.8204664Z   submodules: false
+2024-12-17T05:17:24.8205068Z   set-safe-directory: true
+2024-12-17T05:17:24.8205778Z ##[endgroup]
+2024-12-17T05:17:25.0346238Z Syncing repository: Luismbpr/appgithubaction
+2024-12-17T05:17:25.0347920Z ##[group]Getting Git version info
+2024-12-17T05:17:25.0348691Z Working directory is '/home/runner/work/appgithubaction/appgithubaction'
+2024-12-17T05:17:25.0349709Z [command]/usr/bin/git version
+2024-12-17T05:17:25.0447765Z git version 2.47.1
+2024-12-17T05:17:25.0474954Z ##[endgroup]
+2024-12-17T05:17:25.0494292Z Temporarily overriding HOME='/home/runner/work/_temp/9aa74dad-f71a-4d5c-8890-342ef199c541' before making global git config changes
+2024-12-17T05:17:25.0496692Z Adding repository directory to the temporary git global config as a safe directory
+2024-12-17T05:17:25.0498830Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/appgithubaction/appgithubaction
+2024-12-17T05:17:25.0534462Z Deleting the contents of '/home/runner/work/appgithubaction/appgithubaction'
+2024-12-17T05:17:25.0538581Z ##[group]Initializing the repository
+2024-12-17T05:17:25.0542790Z [command]/usr/bin/git init /home/runner/work/appgithubaction/appgithubaction
+2024-12-17T05:17:25.0640335Z hint: Using 'master' as the name for the initial branch. This default branch name
+2024-12-17T05:17:25.0641893Z hint: is subject to change. To configure the initial branch name to use in all
+2024-12-17T05:17:25.0643402Z hint: of your new repositories, which will suppress this warning, call:
+2024-12-17T05:17:25.0644566Z hint:
+2024-12-17T05:17:25.0645337Z hint: 	git config --global init.defaultBranch <name>
+2024-12-17T05:17:25.0646252Z hint:
+2024-12-17T05:17:25.0647130Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2024-12-17T05:17:25.0648006Z hint: 'development'. The just-created branch can be renamed via this command:
+2024-12-17T05:17:25.0648701Z hint:
+2024-12-17T05:17:25.0649078Z hint: 	git branch -m <name>
+2024-12-17T05:17:25.0649864Z Initialized empty Git repository in /home/runner/work/appgithubaction/appgithubaction/.git/
+2024-12-17T05:17:25.0655104Z [command]/usr/bin/git remote add origin https://github.com/Luismbpr/appgithubaction
+2024-12-17T05:17:25.0693960Z ##[endgroup]
+2024-12-17T05:17:25.0695248Z ##[group]Disabling automatic garbage collection
+2024-12-17T05:17:25.0698252Z [command]/usr/bin/git config --local gc.auto 0
+2024-12-17T05:17:25.0727301Z ##[endgroup]
+2024-12-17T05:17:25.0728546Z ##[group]Setting up auth
+2024-12-17T05:17:25.0734223Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2024-12-17T05:17:25.0763214Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2024-12-17T05:17:25.1078559Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2024-12-17T05:17:25.1106871Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2024-12-17T05:17:25.1329872Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2024-12-17T05:17:25.1365808Z ##[endgroup]
+2024-12-17T05:17:25.1373020Z ##[group]Fetching the repository
+2024-12-17T05:17:25.1375324Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +63a2814182e6c11ace8e7b62d01236c5d2e62197:refs/remotes/origin/main
+2024-12-17T05:17:25.5048712Z remote: Enumerating objects: 13, done.        
+2024-12-17T05:17:25.5050048Z remote: Counting objects:   7% (1/13)        
+2024-12-17T05:17:25.5050916Z remote: Counting objects:  15% (2/13)        
+2024-12-17T05:17:25.5052081Z remote: Counting objects:  23% (3/13)        
+2024-12-17T05:17:25.5052833Z remote: Counting objects:  30% (4/13)        
+2024-12-17T05:17:25.5053595Z remote: Counting objects:  38% (5/13)        
+2024-12-17T05:17:25.5054322Z remote: Counting objects:  46% (6/13)        
+2024-12-17T05:17:25.5054867Z remote: Counting objects:  53% (7/13)        
+2024-12-17T05:17:25.5055821Z remote: Counting objects:  61% (8/13)        
+2024-12-17T05:17:25.5056865Z remote: Counting objects:  69% (9/13)        
+2024-12-17T05:17:25.5057816Z remote: Counting objects:  76% (10/13)        
+2024-12-17T05:17:25.5058503Z remote: Counting objects:  84% (11/13)        
+2024-12-17T05:17:25.5059303Z remote: Counting objects:  92% (12/13)        
+2024-12-17T05:17:25.5059950Z remote: Counting objects: 100% (13/13)        
+2024-12-17T05:17:25.5060638Z remote: Counting objects: 100% (13/13), done.        
+2024-12-17T05:17:25.5061487Z remote: Compressing objects:  12% (1/8)        
+2024-12-17T05:17:25.5062088Z remote: Compressing objects:  25% (2/8)        
+2024-12-17T05:17:25.5062767Z remote: Compressing objects:  37% (3/8)        
+2024-12-17T05:17:25.5063417Z remote: Compressing objects:  50% (4/8)        
+2024-12-17T05:17:25.5064016Z remote: Compressing objects:  62% (5/8)        
+2024-12-17T05:17:25.5064600Z remote: Compressing objects:  75% (6/8)        
+2024-12-17T05:17:25.5065171Z remote: Compressing objects:  87% (7/8)        
+2024-12-17T05:17:25.5065733Z remote: Compressing objects: 100% (8/8)        
+2024-12-17T05:17:25.5066341Z remote: Compressing objects: 100% (8/8), done.        
+2024-12-17T05:17:25.5067123Z remote: Total 13 (delta 0), reused 11 (delta 0), pack-reused 0 (from 0)        
+2024-12-17T05:17:25.5230165Z From https://github.com/Luismbpr/appgithubaction
+2024-12-17T05:17:25.5231579Z  * [new ref]         63a2814182e6c11ace8e7b62d01236c5d2e62197 -> origin/main
+2024-12-17T05:17:25.5233398Z ##[endgroup]
+2024-12-17T05:17:25.5234730Z ##[group]Determining the checkout info
+2024-12-17T05:17:25.5246066Z ##[endgroup]
+2024-12-17T05:17:25.5248582Z ##[group]Checking out the ref
+2024-12-17T05:17:25.5249884Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2024-12-17T05:17:25.5251907Z Switched to a new branch 'main'
+2024-12-17T05:17:25.5253254Z branch 'main' set up to track 'origin/main'.
+2024-12-17T05:17:25.5258595Z ##[endgroup]
+2024-12-17T05:17:25.5300533Z [command]/usr/bin/git log -1 --format='%H'
+2024-12-17T05:17:25.5327272Z '63a2814182e6c11ace8e7b62d01236c5d2e62197'
+2024-12-17T05:17:25.5548569Z ##[group]Run actions/setup-python@v2
+2024-12-17T05:17:25.5549207Z with:
+2024-12-17T05:17:25.5549617Z   python-version: 3.8
+2024-12-17T05:17:25.5550241Z   token: ***
+2024-12-17T05:17:25.5550616Z ##[endgroup]
+2024-12-17T05:17:25.6680823Z Version 3.8 was not found in the local cache
+2024-12-17T05:17:26.2328703Z Version 3.8 is available for downloading
+2024-12-17T05:17:26.2331617Z Download from "https://github.com/actions/python-versions/releases/download/3.8.18-12303122501/python-3.8.18-linux-24.04-x64.tar.gz"
+2024-12-17T05:17:27.2036156Z Extract downloaded archive
+2024-12-17T05:17:27.2167292Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/0687ce60-199e-425a-afa2-2c94a72ee7b9 -f /home/runner/work/_temp/e8f427c5-fe8d-4513-ba49-4660fbaf5920
+2024-12-17T05:17:28.5343321Z Execute installation script
+2024-12-17T05:17:28.5435293Z Check if Python hostedtoolcache folder exist...
+2024-12-17T05:17:28.5436008Z Create Python 3.8.18 folder
+2024-12-17T05:17:28.5451869Z Copy Python binaries to hostedtoolcache folder
+2024-12-17T05:17:29.0104956Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2024-12-17T05:17:29.0146829Z Upgrading pip...
+2024-12-17T05:17:30.7403661Z Looking in links: /tmp/tmp0r7ydyfe
+2024-12-17T05:17:30.7408477Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (56.0.0)
+2024-12-17T05:17:30.7414184Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (23.0.1)
+2024-12-17T05:17:31.7371939Z Collecting pip
+2024-12-17T05:17:31.7767731Z Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+2024-12-17T05:17:31.8129321Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 54.6 MB/s eta 0:00:00
+2024-12-17T05:17:31.8131514Z 
+2024-12-17T05:17:31.8466039Z Installing collected packages: pip
+2024-12-17T05:17:31.8468231Z Attempting uninstall: pip
+2024-12-17T05:17:31.8473927Z Found existing installation: pip 23.0.1
+2024-12-17T05:17:32.0317461Z Uninstalling pip-23.0.1:
+2024-12-17T05:17:32.0397675Z Successfully uninstalled pip-23.0.1
+2024-12-17T05:17:32.7527346Z Successfully installed pip-24.3.1
+2024-12-17T05:17:32.8008118Z Create complete file
+2024-12-17T05:17:32.8089966Z Successfully setup CPython (3.8.18)
+2024-12-17T05:17:32.8199002Z ##[group]Run python -m pip install --upgrade pip
+2024-12-17T05:17:32.8199431Z [36;1mpython -m pip install --upgrade pip[0m
+2024-12-17T05:17:32.8199725Z [36;1mpip install -r requirements.txt[0m
+2024-12-17T05:17:32.8232340Z shell: /usr/bin/bash -e {0}
+2024-12-17T05:17:32.8232580Z env:
+2024-12-17T05:17:32.8232835Z   pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+2024-12-17T05:17:32.8233286Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+2024-12-17T05:17:32.8233583Z ##[endgroup]
+2024-12-17T05:17:33.1704385Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (24.3.1)
+2024-12-17T05:17:33.8918052Z Collecting pandas (from -r requirements.txt (line 1))
+2024-12-17T05:17:33.9016984Z   Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+2024-12-17T05:17:34.0093141Z Collecting pytest (from -r requirements.txt (line 2))
+2024-12-17T05:17:34.0138036Z   Downloading pytest-8.3.4-py3-none-any.whl.metadata (7.5 kB)
+2024-12-17T05:17:34.0375498Z Collecting python-dateutil>=2.8.2 (from pandas->-r requirements.txt (line 1))
+2024-12-17T05:17:34.0421556Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2024-12-17T05:17:34.0982015Z Collecting pytz>=2020.1 (from pandas->-r requirements.txt (line 1))
+2024-12-17T05:17:34.1018810Z   Downloading pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+2024-12-17T05:17:34.1265307Z Collecting tzdata>=2022.1 (from pandas->-r requirements.txt (line 1))
+2024-12-17T05:17:34.1365211Z   Downloading tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+2024-12-17T05:17:34.3538006Z Collecting numpy>=1.20.3 (from pandas->-r requirements.txt (line 1))
+2024-12-17T05:17:34.3665325Z   Downloading numpy-1.24.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.6 kB)
+2024-12-17T05:17:34.3887614Z Collecting exceptiongroup>=1.0.0rc8 (from pytest->-r requirements.txt (line 2))
+2024-12-17T05:17:34.3954351Z   Downloading exceptiongroup-1.2.2-py3-none-any.whl.metadata (6.6 kB)
+2024-12-17T05:17:34.4088911Z Collecting iniconfig (from pytest->-r requirements.txt (line 2))
+2024-12-17T05:17:34.4154493Z   Downloading iniconfig-2.0.0-py3-none-any.whl.metadata (2.6 kB)
+2024-12-17T05:17:34.4440691Z Collecting packaging (from pytest->-r requirements.txt (line 2))
+2024-12-17T05:17:34.4538816Z   Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+2024-12-17T05:17:34.4797003Z Collecting pluggy<2,>=1.5 (from pytest->-r requirements.txt (line 2))
+2024-12-17T05:17:34.4839446Z   Downloading pluggy-1.5.0-py3-none-any.whl.metadata (4.8 kB)
+2024-12-17T05:17:34.5077612Z Collecting tomli>=1 (from pytest->-r requirements.txt (line 2))
+2024-12-17T05:17:34.5114762Z   Downloading tomli-2.2.1-py3-none-any.whl.metadata (10 kB)
+2024-12-17T05:17:34.5324719Z Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r requirements.txt (line 1))
+2024-12-17T05:17:34.5366409Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2024-12-17T05:17:34.5479954Z Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+2024-12-17T05:17:34.6579675Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 119.5 MB/s eta 0:00:00
+2024-12-17T05:17:34.6622936Z Downloading pytest-8.3.4-py3-none-any.whl (343 kB)
+2024-12-17T05:17:34.6757116Z Downloading exceptiongroup-1.2.2-py3-none-any.whl (16 kB)
+2024-12-17T05:17:34.6871576Z Downloading numpy-1.24.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+2024-12-17T05:17:34.8614784Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.3/17.3 MB 102.4 MB/s eta 0:00:00
+2024-12-17T05:17:34.8650297Z Downloading pluggy-1.5.0-py3-none-any.whl (20 kB)
+2024-12-17T05:17:34.8745981Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2024-12-17T05:17:34.8853895Z Downloading pytz-2024.2-py2.py3-none-any.whl (508 kB)
+2024-12-17T05:17:34.8965989Z Downloading tomli-2.2.1-py3-none-any.whl (14 kB)
+2024-12-17T05:17:34.9046428Z Downloading tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+2024-12-17T05:17:34.9149007Z Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+2024-12-17T05:17:34.9251606Z Downloading packaging-24.2-py3-none-any.whl (65 kB)
+2024-12-17T05:17:34.9318206Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2024-12-17T05:17:35.0621482Z Installing collected packages: pytz, tzdata, tomli, six, pluggy, packaging, numpy, iniconfig, exceptiongroup, python-dateutil, pytest, pandas
+2024-12-17T05:17:39.8841015Z Successfully installed exceptiongroup-1.2.2 iniconfig-2.0.0 numpy-1.24.4 packaging-24.2 pandas-2.0.3 pluggy-1.5.0 pytest-8.3.4 python-dateutil-2.9.0.post0 pytz-2024.2 six-1.17.0 tomli-2.2.1 tzdata-2024.2
+2024-12-17T05:17:39.9587426Z ##[group]Run pytest
+2024-12-17T05:17:39.9587658Z [36;1mpytest[0m
+2024-12-17T05:17:39.9615521Z shell: /usr/bin/bash -e {0}
+2024-12-17T05:17:39.9615739Z env:
+2024-12-17T05:17:39.9615971Z   pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+2024-12-17T05:17:39.9616334Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+2024-12-17T05:17:39.9616632Z ##[endgroup]
+2024-12-17T05:17:40.1759365Z ============================= test session starts ==============================
+2024-12-17T05:17:40.1760152Z platform linux -- Python 3.8.18, pytest-8.3.4, pluggy-1.5.0
+2024-12-17T05:17:40.1760812Z rootdir: /home/runner/work/appgithubaction/appgithubaction
+2024-12-17T05:17:40.1761491Z collected 2 items
+2024-12-17T05:17:40.1761982Z 
+2024-12-17T05:17:40.1803639Z tests/test_operation.py ..                                               [100%]
+2024-12-17T05:17:40.1804100Z 
+2024-12-17T05:17:40.1804300Z ============================== 2 passed in 0.02s ===============================
+2024-12-17T05:17:40.2028981Z Post job cleanup.
+2024-12-17T05:17:40.3108147Z Post job cleanup.
+2024-12-17T05:17:40.3996446Z [command]/usr/bin/git version
+2024-12-17T05:17:40.4033609Z git version 2.47.1
+2024-12-17T05:17:40.4076184Z Temporarily overriding HOME='/home/runner/work/_temp/40e9c190-229e-4619-b334-46064e923917' before making global git config changes
+2024-12-17T05:17:40.4077472Z Adding repository directory to the temporary git global config as a safe directory
+2024-12-17T05:17:40.4080832Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/appgithubaction/appgithubaction
+2024-12-17T05:17:40.4114103Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2024-12-17T05:17:40.4144533Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2024-12-17T05:17:40.4381434Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2024-12-17T05:17:40.4402568Z http.https://github.com/.extraheader
+2024-12-17T05:17:40.4412809Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2024-12-17T05:17:40.4443562Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2024-12-17T05:17:40.4793214Z Cleaning up orphan processes
