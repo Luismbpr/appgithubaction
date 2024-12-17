@@ -1,0 +1,40 @@
+name: Python CI
+## Name of the GitHub Action
+## Source: https://github.com/krishnaik06/appgithubaction/blob/b84e335abe29bc8657b733bef044bf36732cae65/.github/workflows/python-app.yml#L4
+
+# Trigger the workflow on any push to the main branch or pull request
+## Can specify multiple branches
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+## Can have multiple jobs running
+## GitHub provides containers. Ubuntu, MacOS, Windows
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code from the repository
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Step 4: Run tests
+      - name: Run tests
+        run: pytest
